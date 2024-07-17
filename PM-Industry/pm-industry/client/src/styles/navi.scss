@@ -1,0 +1,124 @@
+.navbar {
+    position: relative;
+   
+  }
+  
+  .navbarBox {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  
+    .navbarItem {
+      display: flex;
+      align-items: center;
+  
+      a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        padding: 0 50px;
+        font-size: 20px;
+        position: relative;
+  
+        &:hover {
+          color: rgb(255, 185, 21);
+  
+          &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -2px;
+            transform: translateX(-50%);
+            height: 1px;
+            background-color: rgb(255, 185, 21);
+            animation: moveUnderline 0.3s ease forwards;
+          }
+        }
+      }
+    }
+  
+
+  
+    .hamburgerIcon {
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  
+      .line {
+        width: 100%;
+        height: 3px;
+        background-color: #fff;
+        transition: transform 0.3s, opacity 0.3s;
+      }
+  
+      &.open {
+        .line {
+          &:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+            
+          }
+  
+          &:nth-child(2) {
+            opacity: 0;
+          }
+  
+          &:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+          }
+        }
+      }
+    }
+  
+    .menu {
+      position: absolute;
+      top: 150%; /* Position the menu below the navbarBox */
+      left: 70%;
+      width: 30%;
+      background-color: rgba(0, 0, 0, 0.464);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 2; /* Ensure menu appears above other content */
+      transform: translateY(-30%); /* Initially off-screen */
+      transition: transform 0.3s; /* Add transition effect for smooth animation */
+  
+      a {
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        text-decoration: none;
+        margin: 10px 0; /* Add margin between menu items */
+
+        &:hover{
+            color: rgb(255, 185, 21);
+        }
+      }
+    }
+  
+    &.openMenu {
+      .menu {
+        transform: translateY(0); /* Move menu into view */
+      }
+    }
+  }
+  
+  @keyframes moveUnderline {
+    from {
+      width: 0;
+    }
+    to {
+      width: 50%;
+    }
+  }
+  

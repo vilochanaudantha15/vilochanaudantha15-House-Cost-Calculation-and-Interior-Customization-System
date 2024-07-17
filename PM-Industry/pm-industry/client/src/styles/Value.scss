@@ -1,0 +1,153 @@
+
+:root {
+  --primary: #1f3e72;
+  --secondary: rgba(255, 255, 255, 0.78);
+  --black: #131110;
+  --blue-gradient: linear-gradient(97.05deg, #4066ff 3.76%, #2949c6 100%);
+  --orange-gradient: linear-gradient(270deg, #ffb978 0%, #ff922d 100%);
+  --blue: #4066ff;
+  --lightBlue: #eeeeff;
+  --shadow: 0px 23px 21px -8px rgba(136, 160, 255, 0.25);
+}
+
+
+
+.v-container{
+display: flex;
+
+
+  .v-left{
+  flex: 1;
+  
+
+  .image-container{
+    width: 700px;
+    height: 400px;
+    margin: auto;
+    margin-top: 10rem;
+    
+
+  img{
+    width: 700px;
+    height: 450px;
+    
+    
+  }
+}
+  }
+
+  .v-right{
+  flex: 1;
+  padding: 6rem 0;
+
+  
+  .flexCenter {
+    display: flex;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+  }
+  .flexStart {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .flexEnd {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .flexColCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .flexColStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .flexColEnd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+
+
+ .orangeText{
+  color: orange;
+  font-size: 1.5rem;
+  font-weight: 600;
+  
+ }
+
+ .primaryText{
+  color: #1f3e72;
+  font-weight: bold;
+  font-size: 2rem;
+  
+ }
+
+ .secondaryText{
+  color: rgb(140 139 139);
+  font-size: 0.9rem;
+ }
+
+
+ .accordion {
+  margin-top: 2rem;
+  width: 80%;
+  border: none;
+  box-shadow: 0px 23px 21px -8px rgba(136, 160, 255, 0.25); ;
+
+ 
+  
+
+.accordionItem.expanded {
+  box-shadow: var(--shadow);
+  border-radius: 6px;
+  
+  
+}
+
+
+.accordionButton {
+  background: rgb(255, 255, 255);
+  padding: 1rem;
+  justify-content: space-between;
+  cursor: pointer;
+
+}
+}
+
+
+
+
+
+.icon {
+  padding: 10px;
+  background: #eeeeff;
+  border-radius: 5px;
+
+}
+.icon svg {
+  fill: var(--blue);
+}
+
+.accordionButton .primaryText{
+    font-size: 1.1rem;
+}
+
+
+  }
+}
+
+
